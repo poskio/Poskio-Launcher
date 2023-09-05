@@ -14,7 +14,7 @@ body {
 }
 
 .tab-btn-css {
-    /* border-radius: 23px; */
+    border-radius: 23px;
     width: 160px;
     height: 37px;
     margin: 10px 30px;
