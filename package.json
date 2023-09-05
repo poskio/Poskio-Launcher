@@ -2,7 +2,7 @@
     "name": "Poskio",
     "preductname": "Poskio Launcher",
     "version": "2.2.9",
-    "description": "Poskio modded server launcher",
+    "description": "Poskio lanceur serveur moddé",
     "main": "src/app.js",
     "author": "Luuxis/Riptiaz/TheFiery_",
     "settings": "https://launcher.poskio.fr",
