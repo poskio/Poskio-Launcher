@@ -1,10 +1,10 @@
 {
     "name": "Poskio",
     "preductname": "Poskio Launcher",
-    "version": "2.2.9",
-    "description": "Poskio lanceur serveur moddé",
+    "version": "2.3.0",
+    "description": "Poskio modded server launcher",
     "main": "src/app.js",
-    "author": "Luuxis/Riptiaz/TheFiery_",
+    "author": "Luuxis/Riptiaz",
     "settings": "https://launcher.poskio.fr",
     "engines": {
         "node": "16.x.x"
@@ -20,16 +20,16 @@
     },
     "dependencies": {
         "discord-rpc": "^4.0.1",
-        "electron-updater": "^5.0.1",
+        "electron-updater": "^6.1.4",
         "https": "^1.0.0",
-        "minecraft-java-core": "^3.6.2",
+        "minecraft-java-core": "^3.6.4",
         "node-fetch": "^2.6.7",
         "xml-js": "^1.6.11"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
-        "electron": "^19.0.7",
-        "electron-builder": "^23.0.3",
+        "electron": "^22.3.24",
+        "electron-builder": "^24.6.4",
         "nodemon": "^2.0.16"
     },
     "repository": {
