@@ -4,7 +4,7 @@
     "version": "2.3.0",
     "description": "Poskio modded server launcher",
     "main": "src/app.js",
-    "author": "Luuxis/Riptiaz",
+    "author": "Luuxis/Riptiaz/TheFiery",
     "settings": "https://launcher.poskio.fr",
     "engines": {
         "node": "16.x.x"
