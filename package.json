@@ -1,7 +1,7 @@
 {
     "name": "Poskio",
     "preductname": "Poskio Launcher",
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Poskio modded server launcher",
     "main": "src/app.js",
     "author": "Luuxis/Riptiaz/TheFiery",
