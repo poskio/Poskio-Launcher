@@ -19,6 +19,7 @@ body {
     height: 37px;
     margin: 10px 30px;
     background: #00bd7a;
+    border-radius: 20px;
     border: 4px solid #00bd7a;
     text-align: left;
     cursor: pointer;

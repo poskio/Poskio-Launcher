@@ -1,11 +1,11 @@
 {
     "name": "Poskio",
     "preductname": "Poskio Launcher",
-    "version": "2.3.1",
+    "version": "2.3.2",
     "description": "Poskio modded server launcher",
     "main": "src/app.js",
     "author": "Luuxis/Riptiaz/TheFiery",
-    "settings": "https://launcher.poskio.fr",
+    "settings": "https://file.poskio.fr",
     "engines": {
         "node": "16.x.x"
     },
