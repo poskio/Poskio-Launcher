@@ -137,7 +137,7 @@ class Home {
                 java: this.config.java,
                 memory: {
                     min: `${ram.ramMin * 1024}M`,
-                    max: `${ram.ramMax * 1024}M`
+                    max: `${ram.ramMax * 6144}M`
                 }
             }
 
