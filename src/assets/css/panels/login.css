@@ -22,8 +22,8 @@
     border: none;
     margin: 2% 0;
     height: 2em;
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #FFFFFF;
     color: #121212;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
@@ -31,19 +31,19 @@
 
 
 .login-type-btn:hover {
-    background-color: #006e47;
-    box-shadow: 0 0 5px #006e47;
+    background-color: #dce0ff;
+    box-shadow: 0 0 5px #dce0ff;
 }
 
 .login-type-btn:disabled {
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #FFFFFF;
     cursor: default;
 }
 
 .login-type-btn:disabled:hover {
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #FFFFFF;
 }
 
 .microsoft {
@@ -99,21 +99,21 @@
     border: none;
     margin: 2% 0;
     height: 2em;
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #FFFFFF;
     color: #121212;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
 }
 
 .login-btn:hover {
-    background-color: #006e47;
-    box-shadow: 0 0 5px #006e47;
+    background-color: #dce0ff;
+    box-shadow: 0 0 5px #dce0ff;
 }
 
 .cancel {
     border: none;
-    background-color: #ffffff00;
+    background-color: #dce0fff00;
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
@@ -144,8 +144,8 @@
     border: none;
     margin: 2% 0;
     height: 2em;
-    background-color: #00bd7a;
-    box-shadow: 0 0 5px #00bd7a;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #FFFFFF;
     color: #121212;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
@@ -165,7 +165,7 @@
 }
 .cancel-2f {
     border: none;
-    background-color: #ffffff00;
+    background-color: #dce0fff00;
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
@@ -188,7 +188,7 @@
 }
 .cancel-email {
     border: none;
-    background-color: #ffffff00;
+    background-color: #dce0fff00;
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;

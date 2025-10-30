@@ -151,11 +151,11 @@
     height: 37px;
     border-radius: 20px;
     border: none;
-    background: #00bd7a;
+    background: #FFFFFF;
     font: normal normal bold 20px/25px Poppins;
     color: #121212;
     margin: 15px 0;
-    box-shadow: 0 0 5px #00bd7a;
+    box-shadow: 0 0 5px #FFFFFF;
     cursor: pointer;
 }
 
@@ -186,7 +186,7 @@
 }
 
 .progress-bar::-webkit-progress-value {
-    background-color: #00bd7a;
+    background-color: #FFFFFF;
     border-radius: 10px;
 }
 
@@ -198,7 +198,7 @@
 body::-webkit-scrollbar {
     display: none; /* Pour Chromium-based browsers, donc pour Electron */
 }
-.news-list {
+/*.news-list {
     position: relative;
     overflow: auto;
     width: 100%;
@@ -206,7 +206,7 @@ body::-webkit-scrollbar {
 
 .news-list::-webkit-scrollbar {
     width: 0;
-}
+}*/
 
 .news-block {
     margin-bottom: 1rem;
@@ -327,8 +327,8 @@ body::-webkit-scrollbar {
 
 .info-list {
     position: relative;
-    width: 65vh;
-    padding-left: 1rem;
+    width: 45vh;
+    padding-left: 25rem;
     background: none;
 }
 
@@ -340,6 +340,7 @@ body::-webkit-scrollbar {
     border-radius: 10px;
     transition: opacity 1s;
     opacity: .8;
+    padding-left: 20%;
 }
 .ytb,
 .changelog {
@@ -506,7 +507,7 @@ body::-webkit-scrollbar {
     padding: px;
     background: #3436a3;
     font: normal normal bold 15px/20px Poppins;
-    color: #ffffff;
+    color: #dce0ffff;
     box-shadow: 0 0 5px #3436a3;
     cursor: pointer;
     text-align: center;

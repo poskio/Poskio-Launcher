@@ -1,18 +1,18 @@
 {
-    "name": "Poskio",
+    "name": "poskio",
     "preductname": "Poskio Launcher",
-    "version": "3.0.3",
+    "version": "3.0.4",
     "description": "Poskio modded server launcher",
     "main": "src/app.js",
-    "author": "Riptiaz/Boulldogo/Vexato/TheFiery_/Luuxis",
+    "author": "Riptiaz/TheFiery_/Boulldogo/Vexato/Luuxis",
+    "env": "panel",
     "settings": "https://file.poskio.fr",
-    "engines": {
-        "node": "16.x.x"
-    },
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
-        "build": "node build.js",
-        "dev": "nodemon --exec npm start"
+        "build": "node build.js --obf=true --build=platform",
+        "dev": "cross-env-shell DEV_TOOL=open nodemon --ignore AppData/ --ignore node_modules/ --legacy-watch --exec npm start",
+        "icon": "node build.js --icon=https://raw.githubusercontent.com/CentralCorp/CentralCorp-Launcher/master/src/assets/images/icon.png"
+
     },
     "license": "CC0",
     "nodemonConfig": {
@@ -20,17 +20,20 @@
     },
     "dependencies": {
         "discord-rpc": "^4.0.1",
-        "electron-updater": "^6.1.4",
+        "electron-updater": "^6.6.2",
         "https": "^1.0.0",
-        "minecraft-java-core-azbetter": "^3.11.3",
+        "minecraft-java-core-azbetter": "^4.1.3",
         "node-fetch": "^2.6.7",
         "xml-js": "^1.6.11"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
-        "electron": "^22.3.24",
-        "electron-builder": "^24.6.4",
-        "nodemon": "^2.0.16"
+        "electron": "^37.2.0",
+        "electron-builder": "^26.0.12",
+        "nodemon": "^3.1.9",
+        "png2icons": "^2.0.1",
+        "javascript-obfuscator": "^4.1.0",
+        "jimp": "^0.22.12"
     },
     "repository": {
         "type": "git",
