@@ -113,7 +113,7 @@
 
 .cancel {
     border: none;
-    background-color: #dce0fff00;
+    background-color: #dce0ff;
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
@@ -165,7 +165,7 @@
 }
 .cancel-2f {
     border: none;
-    background-color: #dce0fff00;
+    background-color: #dce0ff;
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
@@ -188,7 +188,7 @@
 }
 .cancel-email {
     border: none;
-    background-color: #dce0fff00;
+    background-color: #dce0ff;
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
