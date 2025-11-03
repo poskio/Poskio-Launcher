@@ -26,7 +26,7 @@ class Home {
         this.news = await news;
 
         this.setStaticTexts();
-        this.initNews();
+        //this.initNews();
         this.initLaunch();
         this.initStatusServer();
         this.initBtn();
@@ -47,7 +47,7 @@ class Home {
 
     async initNews() {
         const newsContainer = document.querySelector('.news-list');
-        if (this.news) {
+        /*if (this.news) {
             if (!this.news.length) {
                 this.createNewsBlock(newsContainer, t('no_news_available'), t('news_follow_here'));
             } else {
@@ -56,11 +56,11 @@ class Home {
         } else {
             this.createNewsBlock(newsContainer, t('error_contacting_server'), t('error_contacting_server'));
         }
-        this.setServerIcon();
+        this.setServerIcon();*/
     }
 
     createNewsBlock(container, title, content, author = '', date = {}) {
-        const blockNews = document.createElement('div');
+        /*const blockNews = document.createElement('div');
         blockNews.classList.add('news-block', 'opacity-1');
         blockNews.innerHTML = `
             <div class="news-header">
@@ -75,7 +75,7 @@ class Home {
                     ${author ? `<p class="news-author"><span>${author}</span></p>` : ''}
                 </div>
             </div>`;
-        container.appendChild(blockNews);
+        container.appendChild(blockNews);*/
     }
 
     setServerIcon() {

@@ -112,15 +112,18 @@
 }
 
 .cancel {
+    border-radius: 11px;
     border: none;
-    background-color: #dce0ff;
-    color: #F1F1F1;
+    background-color: #F1F1F1;
+    box-shadow: 0 0 5px #FFFFFF;
+    color: #121212;
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
 }
 
 .cancel:hover {
-    color: #373737;
+    background-color: #dce0ff;
+    box-shadow: 0 0 5px #dce0ff;
 }
 
 .cancel:hover:disabled {
