@@ -40,9 +40,10 @@ function createWindow() {
     });
     Menu.setApplicationMenu(null);
     mainWindow.setMenuBarVisibility(false);
-    mainWindow.loadFile(path.join(app.getAppPath(), 'src', 'launcher.html'));
+    mainWindow.loadFile(path.join(`${app.getAppPath()}/src/launcher.html`));
     mainWindow.once('ready-to-show', () => {
         if (mainWindow) {
+            if (dev) mainWindow.webContents.openDevTools({ mode: 'detach' })
             mainWindow.show();
         }
     });
