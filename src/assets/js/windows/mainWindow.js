@@ -26,24 +26,24 @@ function createWindow() {
         title: pkg.preductname,
         width: 1280,
         height: 720,
-        minWidth: 980,
-        minHeight: 552,
-        resizable: true,
+        minWidth: 1280,
+        minHeight: 720,
+        resizable: false,
         icon: `./src/assets/images/icon.${os.platform() === "win32" ? "ico" : "png"}`,
         frame: false,
         show: false,
         webPreferences: {
             contextIsolation: false,
-            nodeIntegration: true
+            nodeIntegration: true,
+            webSecurity: true,
         },
     });
     Menu.setApplicationMenu(null);
     mainWindow.setMenuBarVisibility(false);
-    mainWindow.loadFile(path.join(`${app.getAppPath()}/src/launcher.html`));
+    mainWindow.loadFile(path.join(app.getAppPath(), 'src', 'launcher.html'));
     mainWindow.once('ready-to-show', () => {
         if (mainWindow) {
-            if (dev) mainWindow.webContents.openDevTools({ mode: 'detach' })
-            mainWindow.show()
+            mainWindow.show();
         }
     });
 }

@@ -271,6 +271,9 @@ class Home {
         document.querySelector('.settings-btn').addEventListener('click', () => {
             changePanel('settings');
         });
+        document.querySelector('.account-btn').addEventListener('click', () => {
+            changePanel('settings');
+        });
     }
 
     async getDate(e) {
