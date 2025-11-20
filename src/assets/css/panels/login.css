@@ -4,20 +4,29 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35%;
-    background: #121212;
-    padding: 20px;
+    padding: 0 20px;
     font: normal normal bold 19px/29px Poppins;
-    color: #E1E1E1;
+    color: #ffffff;
     border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
     text-align: center;
 }
 
 .login-type {
     display: grid;
-    padding: 0 7%;
+    padding: 0 7% 4% 7%;
 }
 
-.login-type-btn {
+.login-card p {
+    font-size: larger;
+}
+
+/*.login-type-btn {
     border-radius: 15px;
     border: none;
     margin: 2% 0;
@@ -44,6 +53,27 @@
 .login-type-btn:disabled:hover {
     background-color: #FFFFFF;
     box-shadow: 0 0 5px #FFFFFF;
+}*/
+
+.login-type-btn {
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin: 3% 0 6% 0;
+    height: 2em;
+    color: #1f1f1f;
+    background: rgba(255, 255, 255, 0.9);
+    font: normal normal bold 19px/29px Poppins;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+}
+
+.login-type-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .microsoft {
@@ -56,12 +86,24 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35%;
-    background: #121212;
     padding: 0 20px;
     font: normal normal bold 19px/29px Poppins;
     color: #E1E1E1;
     border-radius: 15px;
     display: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.name-big {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+    color: #FFFFFF;
 }
 
 .card-body {
@@ -74,13 +116,51 @@
 }
 
 .login-mojang-input {
-    font-family: 'Poppins';
-    letter-spacing: 2px;
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    font-size: 16px;
     color: #fff;
-    border: solid 0px rgba(0, 0, 0, 0);
-    border-radius: 30px;
-    background-color: #373737;
-    padding: 0.375rem 0.75rem;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.login-mojang-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-mojang-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-card-mojang-input label {
+    position: absolute;
+    font-family: sans-serif;
+    padding: 2% 0 0 6%;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.login-card-mojang-input input:focus + label,
+.login-card-mojang-input input:valid + label {
+    font-family: 'Poppins';
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%);
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.login-card-info {
+    padding-bottom: .8rem;
+    color: #ffc2c2;
 }
 
 .loginDisclaimerText {
@@ -97,23 +177,27 @@
 .login-btn {
     border-radius: 15px;
     border: none;
-    margin: 2% 0;
+    outline: none;
+    margin: 3% 0 6% 0;
     height: 2em;
-    background-color: #FFFFFF;
-    box-shadow: 0 0 5px #FFFFFF;
-    color: #121212;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
 }
 
 .login-btn:hover {
-    background-color: #dce0ff;
-    box-shadow: 0 0 5px #dce0ff;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.cancel {
-    border-radius: 11px;
+/*.cancel {
+    border-radius: 15px;
     border: none;
+    height: 1.8em;
     background-color: #F1F1F1;
     box-shadow: 0 0 5px #FFFFFF;
     color: #121212;
@@ -129,73 +213,109 @@
 .cancel:hover:disabled {
     color: #F1F1F1;
     cursor: default;
-}
+}*/
 
 .password-reset {
     cursor: pointer;
-    color: #fff;
-    text-decoration: none;
+    font: 15px sans-serif;
+}
+
+.password-reset:hover {
+    cursor: pointer;
+    color: #c5c5c5;
+}
+
+.new-account-user {
+    cursor: pointer;
+    font: 15px sans-serif;
+    color: #ffffff;
 }
 
 .new-user {
     cursor: pointer;
-    color: #fff;
-    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
 }
-.login-btn-2f {
-    border-radius: 15px;
-    border: none;
-    margin: 2% 0;
-    height: 2em;
-    background-color: #FFFFFF;
-    box-shadow: 0 0 5px #FFFFFF;
-    color: #121212;
-    font: normal normal bold 19px/29px Poppins;
+
+.new-user:hover {
     cursor: pointer;
+    font-size: 16px;
+    color: #d8d8d8;
 }
+
 .a2f-card {
     position: absolute;
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35%;
-    background: #121212;
-    padding: 20px;
+    padding: 0 20px;
     font: normal normal bold 19px/29px Poppins;
-    color: #E1E1E1;
+    color: #ffffff;
     border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
     text-align: center;
 }
-.cancel-2f {
+
+.login-btn-2f {
+    border-radius: 10px;
     border: none;
-    background-color: #dce0ff;
-    color: #F1F1F1;
+    margin: 3% 0 6% 0;
+    height: 2em;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
     font: normal normal bold 19px/29px Poppins;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
 }
+
+.cancel-2f {
+    border: none;
+    background-color: #c5c5c5;
+    color: #F1F1F1;
+    font: normal normal bold 19px/29px Poppins;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .cancel-2f:hover {
     color: #373737;
 }
+
 .email-verify-card {
     position: absolute;
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35%;
-    background: #121212;
-    padding: 20px;
+    padding: 0 20px;
     font: normal normal bold 19px/29px Poppins;
-    color: #E1E1E1;
+    color: #ffffff;
     border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
     text-align: center;
 }
+
 .cancel-email {
     border: none;
-    background-color: #dce0ff;
+    background-color: #c5c5c5;
     color: #F1F1F1;
     font: normal normal bold 19px/29px Poppins;
+    border-radius: 10px;
     cursor: pointer;
 }
+
 .cancel-email:hover {
     color: #373737;
-} 
+}

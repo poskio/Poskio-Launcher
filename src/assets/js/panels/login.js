@@ -25,12 +25,13 @@ class Login {
         document.getElementById('cancel-a2f-btn').textContent = t('cancel');
         document.getElementById('email-verify-label').textContent = t('verify_email');
         document.getElementById('cancel-email-btn').textContent = t('cancel');
+        document.getElementById('connect-label').textContent = t('connect');
         document.getElementById('username-label').textContent = t('username');
         document.getElementById('password-label').textContent = t('password');
         document.getElementById('login-btn').textContent = t('play');
-        document.getElementById('cancel-mojang-btn').textContent = t('cancel');
         document.getElementById('password-reset-link').textContent = t('forgot_password');
         document.getElementById('new-user-link').textContent = t('no_account');
+        document.getElementById('new-user-account').textContent = t('account_user');
     }
 
     async refreshData() {
@@ -137,7 +138,6 @@ class Login {
         return {
             mailInput: document.querySelector('.Mail'),
             passwordInput: document.querySelector('.Password'),
-            cancelMojangBtn: document.querySelector('.cancel-mojang'),
             infoLogin: document.querySelector('.info-login'),
             loginBtn: document.querySelector(".login-btn"),
             mojangBtn: document.querySelector('.mojang'),
@@ -174,7 +174,6 @@ class Login {
 
     setupEventListeners(elements, azauth) {
         elements.mojangBtn.addEventListener("click", () => this.toggleLoginCards("mojang"));
-        elements.cancelMojangBtn.addEventListener("click", () => this.toggleLoginCards("default"));
         elements.cancel2f.addEventListener("click", () => this.resetLoginForm(elements));
         elements.cancelEmail.addEventListener("click", () => this.resetLoginForm(elements));
 
@@ -188,7 +187,6 @@ class Login {
         });
 
         elements.loginBtn.addEventListener("click", async () => {
-            elements.cancelMojangBtn.disabled = true;
             elements.loginBtn.disabled = true;
             elements.mailInput.disabled = true;
             elements.passwordInput.disabled = true;
@@ -226,7 +224,6 @@ class Login {
         this.toggleLoginCards("default");
         elements.infoLogin.innerHTML = "";
         elements.infoLogin2f.innerHTML = "";
-        elements.cancelMojangBtn.disabled = false;
         elements.mailInput.value = "";
         elements.loginBtn.disabled = false;
         elements.mailInput.disabled = false;
@@ -236,7 +233,6 @@ class Login {
     }
 
     enableLoginForm(elements) {
-        elements.cancelMojangBtn.disabled = false;
         elements.loginBtn.disabled = false;
         elements.mailInput.disabled = false;
         elements.passwordInput.disabled = false;
@@ -268,7 +264,6 @@ class Login {
             if (account_connect.A2F === true) {
                 this.toggleLoginCards("a2f");
                 elements.a2finput.value = "";
-                elements.cancelMojangBtn.disabled = false;
                 return;
             }
 

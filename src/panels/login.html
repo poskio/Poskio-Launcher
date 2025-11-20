@@ -27,27 +27,33 @@
 
     <div class="login-card-mojang">
         <div class="card-body">
-            <small class="info-login" id="info-login"></small>
+            <h1 class="name-big" id="connect-label"></h1>
 
             <div class="login-card-mojang-input">
+                <input type="text" class="Mail login-mojang-input" required>  <!-- spellcheck="false" -->
                 <label id="username-label"></label>
-                <input type="text" class="Mail login-mojang-input" spellcheck="false">
                 <small class="error-mail">&nbsp;</small>
             </div>
 
             <div class="login-card-mojang-input">
+                <input type="password" class="Password login-mojang-input" required>
                 <label id="password-label"></label>
-                <input type="password" class="Password login-mojang-input" spellcheck="false">
-                <small class="error-password">&nbsp;</small>
+            </div>
+
+            <div class="login-card-info">
+                <small class="info-login">&nbsp;</small>
+                <small class="info-login" id="info-login"></small>
             </div>
 
             <div class="login-options">
                 <a class="password-reset" id="password-reset-link" target="_blank"></a>
-                <br>
-                <a class="new-user" id="new-user-link" target="_blank"></a>
+                <a class="cancel cancel-mojang" id="cancel-mojang-btn"></a>
                 <div class="btn-option-login">
                     <button class="login-btn" id="login-btn"></button>
-                    <button class="cancel cancel-mojang" id="cancel-mojang-btn"></button>
+                    <div class="without-account">
+                        <a class="new-account-user" id="new-user-account"></a>
+                        <a class="new-user" id="new-user-link" target="_blank"></a>
+                    </div>
                 </div>
             </div>
         </div>
