@@ -246,7 +246,7 @@ class Launcher {
                         const backgroundUrl = role.background;
                         document.body.style.background = urlPattern.test(backgroundUrl) 
                             ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${backgroundUrl}) black no-repeat center center scroll`
-                            : `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../src/assets/images/background/DefaultBackground.jpg") black no-repeat center center scroll`;
+                            : `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../src/assets/images/background/DefaultBackground.png") black no-repeat center center scroll`;
                         break;
                     }
                 }
