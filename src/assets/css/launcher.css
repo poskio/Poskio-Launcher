@@ -81,6 +81,15 @@ img {
     color: #f8f9f9;
 }
 
+.versionlauncher {
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+    font: normal normal bold 15px/20px Poppins;
+    color: #ffffffef;
+    z-index: 11;
+}
+
 .preload-content {
     position: absolute;
     top: 55%;

@@ -24,6 +24,7 @@ class Launcher {
     async init() {
         this.initLog();
         console.log("Initializing Launcher...");
+        document.querySelector(".versionlauncher").innerHTML = `v${pkg.version} <span style="opacity: 0.8;">|</span> Poskio Launcher`;
         if (process.platform === "win32") this.initFrame();
         this.config = await config.GetConfig();
         this.news = await config.GetNews();
