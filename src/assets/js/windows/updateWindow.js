@@ -1,8 +1,10 @@
 /**
  * @author Luuxis
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
+ * Licensed under CC BY-NC 4.0
+ * https://creativecommons.org/licenses/by-nc/4.0/
+ *
+ * Edited by CentralCorp Team
  */
-
 "use strict";
 const { app, BrowserWindow, Menu } = require("electron");
 const path = require("path");
