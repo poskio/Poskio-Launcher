@@ -1,12 +1,12 @@
 {
-    "name": "conflictura",
-    "preductname": "Conflictura Launcher",
-    "version": "4.0.1",
-    "description": "Conflictura modded server launcher",
+    "name": "poskio",
+    "preductname": "Poskio Launcher",
+    "version": "4.0.0",
+    "description": "Poskio modded server launcher",
     "main": "src/app.js",
-    "author": "Riptiaz/Boulldogo/Vexato/Luuxis",
-    "env": "azuriom",
-    "settings": "https://conflictura.eu",
+    "author": "Riptiaz/TheFiery_/Boulldogo/Vexato/Luuxis",
+    "env": "panel",
+    "settings": "https://file.poskio.fr",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "build": "node build.js --obf=true --build=platform",
@@ -38,6 +38,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Riptiaz/CentralCorp-Launcher.git"
+      "url": "git+https://github.com/poskio/Poskio-Launcher.git"
     }
 }

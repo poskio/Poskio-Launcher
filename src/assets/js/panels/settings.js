@@ -198,7 +198,7 @@ class Settings {
 
     updateBackground(account) {
         return new Promise((resolve) => {
-            const defaultBg = '../src/assets/images/background/light.jpg';
+            const defaultBg = '../src/assets/images/background/light.png';
             let backgroundUrl = null;
 
             if (this.config.role_data && account.user_info && account.user_info.role) {

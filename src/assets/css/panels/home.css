@@ -1,8 +1,8 @@
 :root {
-    --accent-color: #00bd7a;
-    --accent-color-dark: #00a066;
-    --accent-color-glow: rgba(0, 189, 122, 0.4);
-    --accent-color-subtle: rgba(0, 189, 122, 0.15);
+    --accent-color: #0081bd;
+    --accent-color-dark: #006da0;
+    --accent-color-glow: rgba(0, 120, 189, 0.4);
+    --accent-color-subtle: rgba(0, 120, 189, 0.15);
     --bg-primary: rgba(12, 12, 16, 0.92);
     --bg-secondary: rgba(22, 22, 28, 0.88);
     --bg-card: rgba(32, 32, 40, 0.85);
@@ -11,7 +11,7 @@
     --text-secondary: rgba(240, 240, 242, 0.7);
     --text-muted: rgba(240, 240, 242, 0.5);
     --border-subtle: rgba(255, 255, 255, 0.06);
-    --border-accent: rgba(0, 189, 122, 0.3);
+    --border-accent: rgba(0, 120, 189, 0.3);
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
@@ -249,7 +249,7 @@
 }
 
 .progress-bar::-webkit-progress-value {
-    background: linear-gradient(90deg, var(--accent-color), #00e892);
+    background: linear-gradient(90deg, var(--accent-color), #0081bd);
     border-radius: 4px;
 }
 

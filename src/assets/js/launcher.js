@@ -24,6 +24,7 @@ class Launcher {
     async init() {
         this.initLog();
         console.log("Initializing Launcher...");
+                document.querySelector(".versionlauncher").innerHTML = `v${pkg.version} <span style="opacity: 0.8;">|</span> Poskio Launcher`;
         if (process.platform === "win32") this.initFrame();
         this.config = await config.GetConfig();
         this.applyAccentColor();
@@ -309,7 +310,7 @@ class Launcher {
 
     preloadBackground(account) {
         return new Promise((resolve) => {
-            const defaultBg = '../src/assets/images/background/light.jpg';
+            const defaultBg = '../src/assets/images/background/light.png';
             let backgroundUrl = null;
 
             if (this.config.role_data && account.user_info && account.user_info.role) {
@@ -365,7 +366,7 @@ class Launcher {
     }
 
     updateBackground(account) {
-        const defaultBg = '../src/assets/images/background/light.jpg';
+        const defaultBg = '../src/assets/images/background/light.png';
         let backgroundUrl = null;
 
         if (this.config.role_data && account.user_info && account.user_info.role) {
