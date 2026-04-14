@@ -27,6 +27,7 @@
     overflow: hidden;
     padding-top: 26px;
     box-sizing: border-box;
+    align-items: center;
 }
 
 
@@ -36,14 +37,17 @@
     justify-content: space-between;
     width: 72px;
     min-width: 72px;
-    height: 100%;
-    background: rgba(10, 10, 12, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    height: 600px;
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.102);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(144, 161, 185, 0.5);
     padding: 20px 0 20px 0;
     box-sizing: border-box;
     z-index: 10;
+    margin-left: 50px;
+    border-radius: 63px;
 }
 
 
@@ -258,7 +262,7 @@
     height: 44px;
     border: none;
     border-radius: var(--radius-md);
-    background: var(--bg-hover);
+    background: rgba(255, 255, 255, 0.34);
     color: var(--text-secondary);
     cursor: pointer;
     transition: var(--transition-smooth);
@@ -268,7 +272,7 @@
 }
 
 .settings-btn:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.34);
     color: var(--text-primary);
     transform: rotate(60deg);
 }
@@ -278,18 +282,41 @@
 }
 
 .main-content {
-    flex: 1;
+    /*flex: 1;
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 1fr auto;
-    gap: 12px;
+    gap: 12px;*/
     padding: 12px;
-    height: 100%;
+    height: 85%;
     box-sizing: border-box;
-    overflow: hidden;
+    width: 100%;
 }
 
-.news-section {
+.content-links {
+    display: flex;
+    gap: 55px;
+    flex-direction: row;
+    margin-left: 9%;
+    margin-right: auto;
+    max-width: 790px;
+}
+
+.content-links hr {
+    width: 150px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.content-links a {
+    font: 500 20px/1.3 'Poppins', sans-serif;
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+    text-decoration: none;
+    position: relative;
+}
+
+/*.news-section {
     grid-column: 1;
     grid-row: 1;
     overflow: hidden;
@@ -434,25 +461,28 @@
     flex-direction: column;
     gap: 14px;
     overflow: hidden;
-}
+}*/
 
 .info-item {
     flex-shrink: 0;
     padding-right: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 30px;
 }
 
 .server {
     position: relative;
-    width: 100%;
+    width: 350px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-radius: var(--radius-md);
-    padding: 10px;
+    padding: 13px;
     box-sizing: border-box;
     transition: var(--transition-smooth);
     opacity: 0.95;
-    border: 1px solid var(--border-subtle);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .server:hover {
@@ -461,11 +491,12 @@
 }
 
 .server-img {
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
     border-radius: 8px;
     float: left;
     margin-right: 10px;
+    margin-top: -3px;
 }
 
 .server-text {
@@ -473,7 +504,7 @@
 }
 
 .server-text .name {
-    font: 600 14px/1.3 'Poppins', sans-serif;
+    font: 600 18px/1.3 'Poppins', sans-serif;
     color: var(--text-primary);
     margin-bottom: 3px;
     position: static;
@@ -482,11 +513,12 @@
 }
 
 .server-text .desc {
-    font: 400 11px/1.3 'Poppins', sans-serif;
+    font: 400 12px/1.3 'Poppins', sans-serif;
     color: var(--text-secondary);
     position: static;
     left: auto;
     top: auto;
+    margin-top: -5px;
 }
 
 .etat-text {
@@ -502,7 +534,7 @@
 }
 
 .etat-text .text {
-    font: 600 12px/1 'Poppins', sans-serif;
+    font: 600 15px/1 'Poppins', sans-serif;
     color: var(--text-primary);
     position: static;
     transform: none;
@@ -531,7 +563,7 @@
     color: #e63946;
 }
 
-.ytb-container {
+/*.ytb-container {
     flex: 1;
     min-height: 0;
     display: flex;
@@ -653,7 +685,7 @@
     aspect-ratio: 16/9;
     border: none;
     border-radius: var(--radius-sm);
-}
+}*/
 
 .advert-banner {
     grid-column: 1 / -1;

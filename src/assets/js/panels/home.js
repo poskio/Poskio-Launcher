@@ -43,9 +43,9 @@ class Home {
         document.getElementById('text-download').textContent = t('verification');
         document.getElementById('server-name').textContent = t('offline');
         document.getElementById('server-desc').innerHTML = `<span class="red">${t('closed')}</span>`;
-        document.getElementById('video-title').textContent = t('community_video');
-        document.getElementById('play-video-btn').innerHTML = '&#9658;';
-        document.getElementById('view-video-btn').textContent = t('view_video');
+        //document.getElementById('video-title').textContent = t('community_video');
+        //document.getElementById('play-video-btn').innerHTML = '&#9658;';
+        //document.getElementById('view-video-btn').textContent = t('view_video');
     }
 
     async initNews() {
@@ -82,7 +82,6 @@ class Home {
                     ${author ? `<p class="news-author"><span>${author}</span></p>` : ''}
                 </div>
             </div>`;
-        container.appendChild(blockNews);
     }
 
     setServerIcon() {
@@ -234,7 +233,7 @@ class Home {
             const serverPing = await new Status(ip, port).getStatus();
             if (!serverPing.error) {
                 nameServer.textContent = this.config.status.nameServer;
-                serverMs.innerHTML = `<span class="green">${t('server_online')}</span> - ${serverPing.ms}${t('server_ping')}`;
+                serverMs.innerHTML = `<span class="green">${t('Serveur En Ligne')}</span> - ${serverPing.ms}${t('ms')}`;
                 online.classList.toggle("off");
                 playersConnected.textContent = serverPing.playersConnect;
             } else {
@@ -250,7 +249,7 @@ class Home {
     async initVideo() {
         const videoContainer = document.querySelector('.ytb');
         if (!this.config.video_activate) {
-            videoContainer.style.display = 'none';
+            //videoContainer.style.display = 'none';
             return;
         }
 
