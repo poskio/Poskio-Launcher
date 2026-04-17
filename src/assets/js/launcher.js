@@ -184,9 +184,9 @@ class Launcher {
     }
 
     async refreshDataAndPreload() {
-        document.querySelector('.player-role').innerHTML = '';
-        document.querySelector('.player-monnaie').innerHTML = '';
-        document.querySelector('.player-tooltip-role').innerHTML = '';
+        //document.querySelector('.player-role').innerHTML = '';
+        //document.querySelector('.player-monnaie').innerHTML = '';
+        //document.querySelector('.player-tooltip-role').innerHTML = '';
 
         const loadPromises = [];
         loadPromises.push(this.initPreviewSkin());
@@ -194,8 +194,8 @@ class Launcher {
         const uuid = (await this.database.get('1234', 'accounts-selected')).value;
         const account = (await this.database.get(uuid.selected, 'accounts')).value;
 
-        this.updateRole(account);
-        this.updateMoney(account);
+        //this.updateRole(account);
+        //this.updateMoney(account);
         this.updateWhitelist(account);
 
         loadPromises.push(this.preloadBackground(account));
@@ -240,7 +240,7 @@ class Launcher {
         this.updateBackground(account);
     }
 
-    updateRole(account) {
+    /*updateRole(account) {
         const tooltipRole = document.querySelector('.player-tooltip-role');
         const sidebarRole = document.querySelector('.player-role');
 
@@ -261,7 +261,7 @@ class Launcher {
         } else {
             monnaieEl.style.display = 'none';
         }
-    }
+    }*/
 
     applyAccentColor() {
         if (this.config.accent_color) {

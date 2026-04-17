@@ -110,8 +110,8 @@ class Settings {
     }
 
     async refreshData() {
-        document.querySelector('.player-role').innerHTML = '';
-        document.querySelector('.player-monnaie').innerHTML = '';
+        //document.querySelector('.player-role').innerHTML = '';
+        //document.querySelector('.player-monnaie').innerHTML = '';
         await this.initOthers();
         await this.initPreviewSkin();
         await this.updateAccountImage();
@@ -151,13 +151,13 @@ class Settings {
         const uuid = (await this.database.get('1234', 'accounts-selected')).value;
         const account = (await this.database.get(uuid.selected, 'accounts')).value;
 
-        this.updateRole(account);
-        this.updateMoney(account);
+        //this.updateRole(account);
+        //this.updateMoney(account);
         this.updateWhitelist(account);
         await this.updateBackground(account);
     }
 
-    updateRole(account) {
+    /*updateRole(account) {
         if (this.config.role && account.user_info.role) {
             const blockRole = document.createElement("div");
             blockRole.innerHTML = `<div>${t('grade')}: ${account.user_info.role.name}</div>`;
@@ -175,7 +175,7 @@ class Settings {
         } else {
             document.querySelector(".player-monnaie").style.display = "none";
         }
-    }
+    }*/
 
     updateWhitelist(account) {
         const playBtn = document.querySelector(".play-btn");

@@ -7,7 +7,7 @@
  */
 'use strict';
 
-import { logger, database, changePanel, t } from '../utils.js';
+import { logger, database, changePanel, addAccountSimple, t } from '../utils.js';
 const { Launch, Status } = require('minecraft-java-core-azbetter');
 const { ipcRenderer, shell } = require('electron');
 const path = require('path');
@@ -36,6 +36,7 @@ class Home {
         this.initVideo();
         this.initAdvert();
         this.verifyModsBeforeLaunch();
+        this.initAccountsSimple();
     }
 
     setStaticTexts() {
@@ -233,16 +234,16 @@ class Home {
             const serverPing = await new Status(ip, port).getStatus();
             if (!serverPing.error) {
                 nameServer.textContent = this.config.status.nameServer;
-                serverMs.innerHTML = `<span class="green">${t('Serveur En Ligne')}</span> - ${serverPing.ms}${t('ms')}`;
+                serverMs.innerHTML = `<span class="green">${t('En Ligne')}</span> - ${serverPing.ms}${t('ms')}`;
                 online.classList.toggle("off");
                 playersConnected.textContent = serverPing.playersConnect;
             } else {
                 nameServer.textContent = t('server_unavailable');
-                serverMs.innerHTML = `<span class="red">${t('server_closed')}</span>`;
+                serverMs.innerHTML = `<span class="red">${t('Fermé')}</span>`;
             }
         } catch (e) {
             nameServer.textContent = t('server_unavailable');
-            serverMs.innerHTML = `<span class="red">${t('server_closed')}</span>`;
+            serverMs.innerHTML = `<span class="red">${t('Fermé')}</span>`;
         }
     }
 
@@ -303,6 +304,31 @@ class Home {
         document.querySelector('.settings-btn').addEventListener('click', () => {
             changePanel('settings');
         });
+        document.querySelector('.accounts-simple-btn').addEventListener('click', () => {
+            changePanel('settings');
+        });
+    }
+
+    async initAccountsSimple() {
+        const accounts = await this.database.getAll('accounts');
+        const accountsSimple = document.querySelector('.accounts-simple-btn');
+
+        if (!accountsSimple) return;
+        accountsSimple.innerHTML = '';
+
+        if (!Array.isArray(accounts) || accounts.length === 0) {
+            const emptyMessage = document.createElement('div');
+            emptyMessage.classList.add('account-simple-btn');
+            emptyMessage.textContent = t('no_accounts_available');
+            accountsSimple.appendChild(emptyMessage);
+            return;
+        }
+
+        for (const account of accounts) {
+            if (account?.value) {
+                addAccountSimple(account.value);
+            }
+        }
     }
 
     async getDate(e) {
@@ -357,7 +383,7 @@ class Home {
         modsListElement.appendChild(modElement);
     }
 
-    updateRole(account) {
+    /*updateRole(account) {
         const tooltipRole = document.querySelector('.player-tooltip-role');
         const sidebarRole = document.querySelector('.player-role');
 
@@ -369,7 +395,7 @@ class Home {
             tooltipRole.style.display = 'none';
             sidebarRole.style.display = 'none';
         }
-    }
+    }*/
 
     updateWhitelist(account) {
         const playBtn = document.querySelector(".play-btn");

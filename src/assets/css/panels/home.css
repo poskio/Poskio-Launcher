@@ -39,12 +39,13 @@
     min-width: 72px;
     height: 600px;
     min-height: 600px;
-    background: rgba(255, 255, 255, 0.102);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(144, 161, 185, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 20px 0 20px 0;
     box-sizing: border-box;
+    box-shadow: -2px 5px 5px rgba(0, 0, 0, 0.25);
     z-index: 10;
     margin-left: 50px;
     border-radius: 63px;
@@ -71,7 +72,7 @@
     align-items: center;
 }
 
-.player-avatar-wrapper {
+/*.player-avatar-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -155,6 +156,22 @@
 
 .player-role {
     display: none;
+}*/
+.server-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.server-img-icon {
+    background: url("../../images/icon.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
 }
 
 .play-element {
@@ -282,11 +299,6 @@
 }
 
 .main-content {
-    /*flex: 1;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 1fr auto;
-    gap: 12px;*/
     padding: 12px;
     height: 85%;
     box-sizing: border-box;
@@ -299,7 +311,7 @@
     flex-direction: row;
     margin-left: 9%;
     margin-right: auto;
-    max-width: 790px;
+    max-width: 1000px;
 }
 
 .content-links hr {
@@ -314,6 +326,65 @@
     transition: var(--transition-smooth);
     text-decoration: none;
     position: relative;
+}
+
+.content-links a:hover {
+    color: var(--text-primary);
+}
+
+.account-simple-btn {
+    display: flex;
+    gap: 14px;
+}
+
+.accounts-simple-btn .active-account {
+    border: 1px solid rgba(255, 255, 255, 0) !important;
+    box-shadow: none !important;
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+.accounts-simple-btn .account-head {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.account-head:hover {
+    border-radius: 8px;
+    transform: scale(1.08);
+}
+
+.accounts-simple-btn .online-indicator {
+    position: absolute;
+    transform: translate(115px, 45px);
+    width: 20px;
+    height: 20px;
+    background-color: #1AC707;
+    box-shadow: 0 0 10px rgba(26, 199, 7, 0.6);
+    border-radius: 50%;
+}
+
+.account-info {
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.account-info .account-name {
+    font: 600 18px/1.3 'Poppins', sans-serif;
+    color: #ffffff;
+    word-break: break-word;
+}
+
+.account-info .account-connected {
+    font: 600 13px/1.3 'Poppins', sans-serif;
+    color: #51D920;
+    word-break: break-word;
 }
 
 /*.news-section {
@@ -474,15 +545,16 @@
 .server {
     position: relative;
     width: 350px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: var(--radius-md);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 16px;
     padding: 13px;
     box-sizing: border-box;
     transition: var(--transition-smooth);
     opacity: 0.95;
     border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: -4px 7px 10px rgba(0, 0, 0, 0.25);
 }
 
 .server:hover {
@@ -513,8 +585,8 @@
 }
 
 .server-text .desc {
-    font: 400 12px/1.3 'Poppins', sans-serif;
-    color: var(--text-secondary);
+    font: 500 12px/1.3 'Poppins', sans-serif;
+    color: var(--text-primary);
     position: static;
     left: auto;
     top: auto;

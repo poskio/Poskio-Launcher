@@ -43,6 +43,7 @@ export {
     logger,
     changePanel,
     addAccount,
+    addAccountSimple,
     slider as Slider,
     accountSelect,
     showLoadingOverlay,
@@ -70,6 +71,24 @@ function addAccount(data) {
         <div class="account-delete"><div class="icon-account-delete icon-account-delete-btn"></div></div>
     `;
     document.querySelector('.accounts').appendChild(div);
+}
+
+function addAccountSimple(data) {
+    const azauth = getAzAuthUrl();
+    const timestamp = new Date().getTime();
+    const div = document.createElement("div");
+    div.classList.add("account-simple-btn");
+    div.id = data.uuid;
+    div.innerHTML = `
+        <div class="account-info">
+            <div class="account-name">${data.name}</div>
+            <div class="account-connected">Connecté</div>
+        </div>
+        <img class="account-head" src="${azauth}api/skin-api/avatars/face/${data.name}/?t=${timestamp}">
+        <div class="online-indicator"></div>
+    `;
+    const container = document.querySelector('.accounts-simple-btn');
+    if (container) container.appendChild(div);
 }
 
 function accountSelect(uuid) {
