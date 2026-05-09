@@ -181,8 +181,8 @@ class Settings {
         const playBtn = document.querySelector(".play-btn");
 
         if (this.config.whitelist_activate &&
-            (!this.config.whitelist.includes(account.name) &&
-                !this.config.whitelist_roles.includes(account.user_info.role.name))) {
+            (!this.config.whitelist.includes(account.name) /*&&
+                !this.config.whitelist_roles.includes(account.user_info.role.name)*/)) {
             playBtn.style.background = "#696969";
             playBtn.style.pointerEvents = "none";
             playBtn.style.boxShadow = "none";
