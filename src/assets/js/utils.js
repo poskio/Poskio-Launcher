@@ -74,6 +74,18 @@ function addAccount(data) {
 }
 
 function addAccountSimple(data) {
+    const container = document.querySelector('.accounts-simple-btn');
+    if (!container) return;
+
+    const emptyMsg = container.querySelector('.account-simple-btn:not([id])');
+    if (emptyMsg) {
+        emptyMsg.remove();
+    }
+
+    const existing = container.querySelector(`[id="${data.uuid}"]`);
+    if (existing) {
+        existing.remove();
+    }
     const azauth = getAzAuthUrl();
     const timestamp = new Date().getTime();
     const div = document.createElement("div");
@@ -87,8 +99,7 @@ function addAccountSimple(data) {
         <img class="account-head" src="${azauth}api/skin-api/avatars/face/${data.name}/?t=${timestamp}">
         <div class="online-indicator"></div>
     `;
-    const container = document.querySelector('.accounts-simple-btn');
-    if (container) container.appendChild(div);
+    container.appendChild(div);
 }
 
 function accountSelect(uuid) {

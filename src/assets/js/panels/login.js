@@ -5,7 +5,7 @@
  *
  * Edited by CentralCorp Team
  */
-import { database, changePanel, addAccount, accountSelect, showLoadingOverlay, hideLoadingOverlay, t } from '../utils.js';
+import { database, changePanel, addAccount, addAccountSimple, accountSelect, showLoadingOverlay, hideLoadingOverlay, t } from '../utils.js';
 const { AZauth } = require('minecraft-java-core-azbetter');
 const { ipcRenderer, shell } = require('electron');
 const pkg = require('../package.json');
@@ -334,6 +334,7 @@ class Login {
             showLoadingOverlay();
             await this.database.update(account, 'accounts');
             await this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
+            addAccountSimple(account);
             accountSelect(account.uuid);
             changePanel("home");
             await this.refreshData();
@@ -344,6 +345,7 @@ class Login {
         await this.database.add(account, 'accounts');
         await this.database.update({ uuid: "1234", selected: account.uuid }, 'accounts-selected');
         addAccount(account);
+        addAccountSimple(account);
         accountSelect(account.uuid);
         changePanel("home");
         await this.refreshData();
